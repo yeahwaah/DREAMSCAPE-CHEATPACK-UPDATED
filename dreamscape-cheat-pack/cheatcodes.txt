@@ -1,0 +1,2364 @@
+https://6e69f875ff85.ngrok.io/
+
+
+
+
+
+String Replace
+
+sed -i -e 's/find/replace/g' /tmp/file.txt
+
+effective string replace
+perl -pi -e 's/http://linkingfaces.com/https://linkingfaces.com/g'
+
+define( 'WP_DEBUG', true );
+
+define( 'WP_SITEURL', 'http://hp277.hostpapa.com/~mypop214' );
+define( 'WP_HOME', 'http://hp277.hostpapa.com/~mypop214' );
+
+define( 'WP_MEMORY_LIMIT', '512M' );
+define( 'WP_MAX_MEMORY_LIMIT', '512M' );
+
+
+
+REWRITE RULE SSL
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)\ HTTP/ [NC]
+  RewriteCond %{HTTPS} !=on [NC]
+  RewriteRule ^/?(wp-admin/|wp-login\.php) https://mysite.com%{REQUEST_URI}%{QUERY_STRING} [R=301,QSA,L]
+  
+  
+  
+added this on wp-config.php Line 3
+
+define('FORCE_SSL_ADMIN', true);
+
+added on .htaccess, Line 1
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)\ HTTP/ [NC]
+  RewriteCond %{HTTPS} !=on [NC]
+  RewriteRule ^/?(wp-admin/|wp-login\.php) https://plugelectrics.com.au%{REQUEST_URI}%{QUERY_STRING} [R=301,QSA,L]
+
+added plugin called
+
+WordPress HTTPS  
+
+    find . -type d -print0 | xargs -0 chmod 0755 # For directories
+
+    or
+
+    find . -type f -print0 | xargs -0 chmod 0644 # For files
+------------------------------------------------------------
+
+To get the ImapCopy
+
+http://www.ardiehl.de/imapcopy/imapcopy.tar.gz
+or
+http://home.arcor.de/armin.diehl/imapcopy/imapcopy.tar.gz
+
+Copying Emails from a server to another server ( imap server ) 
+SourceServer --IP or Hostname
+SourcePort 143
+DestServer --IP or Hostname
+DestPort 143
+DenyFlags "\Recent"
+
+copy "info@finewinedirect.com.au" "Eib9Thae@h" "info@finewinedirect.com.au" "Eib9Thae@h"
+copy "sales@finewinedirect.com.au" "Eib9Thae@h" "sales@finewinedirect.com.au" "Eib9Thae@h"  
+To test it
+
+./imapcopy -t ( to run it via monitor.au imapcopy -t )
+
+To run the copy
+
+./imapcopy ( to run it via monitor.au imapcopy -s -u -l ) 
+
+
+
+
+
+sudo /root/manage_blocked_ips.py - ip management
+sudo cat /var/log/exim_mainlog | grep IP - exim
+sudo cat /var/log/maillog | grep IP - dovecat
+
+sudo grep IP /etc/httpd/logs/error_log
+
+
+sudo cat /var/cpanel/dsmail_hooked_domains | grep DOMAIN
+sudo cat /var/cpanel/dsmail_hooked_accounts | grep HOSTING_ACCOUNT
+
+sudo /scripts/whoowns DOMAIN
+
+sudo cat /var/log/nginx/access.log | grep IP - ddos
+sudo grep IP /var/log/maillog | grep dovecot
+
+zgrep arted4li /home/auditd/audit.log_2017_01_24.gz | grep DELETE
+
+
+MAIL IP CHANGE - sudo /root/automate_mailip_change.sh -b
+sudo cat /etc/mailips
+
+
+SPAM
+
+R
+
+
+
+MAIL DEBUG
+sudo /root/mail_debug.py -d DOMAIN	
+
+FROZEN MAILsudo exiqgrep -if "^<>$" | xargs sudo exim -Mrm
+
+
+TERM LOG
+/var/cpanel/accounting.log
+
+
+SSL/TLS VERSION
+
+
+SPF
+"v=spf1 +a +mx  include:_spf.au.syrahost.com ?all" 
+*spf
+
+
+# Spam Firewall - filter.austweb.com.au
+user: tier2@syrahost.com
+pass: Cu2oogei3Cha 
+
+FAILED LOGIN
+/usr/local/cpanel/logs/login_log
+
+ERROR LOG cat /etc/httpd/logs/error_log 
+
+THEME ISSUE
+svn revert -R /usr/local/cpanel/base/frontend/Dreamscape/* 
+
+MAX DEFER
+/var/cpanel/email_send_limits
+
+
+SUSPEND
+/usr/local/cpanel/scripts/postsuspendacct
+
+
+# scanning malware
+grep -RI -C 1 'eval' ./ | grep -v .js | less 
+grep -rl "\[\$GLOBALS\[" ./ 
+grep -rl --include=*php* '=$_COOKIE;'  
+grep -rl --include=*php* -e 'preg_replace("/.*/e"'  
+grep -RI -C 1 'GLOBALS' ./ | less
+grep -rl "\[\$GLOBALS\[" ./
+grep -rl "*/include"
+grep -RI -C 1 '\"64_decode' ./ | less
+grep -rI "eval" ./ | less
+
+ACCESS and DELETE grep babylear /usr/local/cpanel/logs/access_log | awk '{print $1,$4}' | cut -d ':' -f1 | sort | uniq -c | sort -n
+
+
+DB Size
+du -sh /var/lib/mysql/DB_NAME
+
+CageFS
+/usr/sbin/cagefsctl --enable USER
+CageFS
+sudo cagefsctl --remount $USER
+
+sudo ruby /root/qfix.rb
+
+
+SPAM ISSUE
+# mail cluster
+"v=spf1 +a +mx include:_spf.au.syrahost.com -all"
+"v=spf1 +a +mx include:_spf.au.syrahost.com -all"
+
+# cpanel mail
+"v=spf1 +a +mx include:_spf.syrahost.com -all"
+
+
+LOCK AND SUSPEND
+/scripts/suspendacct <username> "Reason" 1
+
+
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b dc=au,dc=syrahost,dc=com  domainName=asiabusinessconnection.org.au
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b dc=au,dc=syrahost,dc=com  mail=garo@asiabusinessconnection.org.au
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b dc=au,dc=syrahost,dc=com  mail=*@asiabusinessconnection.org.au
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b ou=users,dc=au,dc=syrahost,dc=com cn=*-cpaneluser
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b ou=domains,dc=au,dc=syrahost,dc=com domainAdmin=wc15-aeconsul
+ldapsearch -Y EXTERNAL -LLL  -H ldapi:/// -b ou=domains,dc=au,dc=syrahost,dc=com sn=aeconsulting.co.nz 
+
+
+
+FIX PATH
+sudo /root/fix_paths.pl username 
+
+
+KILL DNSs
+ <domain.com>
+
+
+/usr/local/cpanel/DSMail/migration/migrate_domain.pl $DOMAIN 
+
+
+CLUSTER IP CHANGE/usr/local/sbin/automate_mta_mailip_change.sh  -b
+
+enable Keep-alive
+nano /etc/httpd/conf/httpd.conf
+locate KeepAlive
+change its status from Off to On
+/usr/local/cpanel/bin/apache_conf_distiller --update
+then last step /etc/init.d/httpd -k graceful
+
+
+
+CRMS SYNC
+sudo /usr/local/cpanel/3rdparty/bin/perl /usr/local/cpanel/internal_web_sync.pl 
+
+
+
+# show all jails
+sudo fail2ban-client status
+
+# ban IP
+sudo fail2ban-client set STATUS banip IP_ADDRESS
+
+
+INSTALLATRON REPAIR
+/usr/local/installatron/repair -f --quick
+/usr/local/installatron/installatron --repair --recache
+/usr/local/installatron/installatron --send-update-report
+
+
+Change mailbox
+change_mailbox_password.sh
+
+check domainroot@webcloud23 [~]# cd /usr/local/cpanel/DSMail/migration/
+root@webcloud23 [/usr/local/cpanel/DSMail/migration]# ./check_domain.sh yourcastle.com.au
+
+
+ruby ./qfix.rb
+
+Get-MailboxImportRequest -Status Failed |Set-MailboxImportRequest -BadItemLimit Unlimited -LargeItemLimit 50
+Get-MailboxImportRequest -Status failed |Resume-MailboxImportRequest
+
+
+
+VPS
+sudo ssh -i /root/.ssh/id_rsa_vps root@ServerIPaddress/vs-hostname  
+
+
+IMAP SYNC
+imapsync --nofoldersizes --skipsize --fast \
+--host1 mail.au.syrahost.com --user1 amandachristmann@peasy.com.au --password1 'Australianfg1' \
+--host2 mail.premium.exchange --user2 amandachristmann@peasy.com.au --password2 'd$jsonv5yTd4' \
+--automap "$@" --sslargs1 SSL_verify_mode=0 --sslargs2 SSL_verify_mode=0
+
+
+
+
+
+\\EDGE01-AU\AgentLog
+\\EDGE01-AU\SMTPLogs
+\\EDGE02-AU\AgentLog
+\\EDGE02-AU\SMTPLogs
+\\EDGE03-AU\AgentLog
+\\EDGE03-AU\SMTPLogs
+
+
+
+
+# copy mail cluster to cpanel mail
+doveadm -D -v -o doveadm_password=eUHZQXUAbTeRThKUmE5g sync -u EMAIL_ADDRESS tcp:mailstore01.au.syrahost.com:24245
+
+
+
+
+define('DISABLE_WP_CRON', true);
+
+
+CHECK for large files
+/root/tos.large.files.sh -phome8 -s800
+
+
+ http://backblaze3.au.syrahost.com/joblogs.php?jobid=178392
+ 
+ 
+Free disk space is less than 10% on volume /home4: 9.99 %
+ 
+ 
+ 
+Sender log in Exchange
+ 
+Get-MessageTrackingLog -ResultSize Unlimited -Start "02/08/2018" -End "02/08/2018" -Sender "edo@chittering.wa.gov.au"
+
+
+/scripts/mailperm
+
+
+
+
+CGI websites
+/scripts/rebuilddnsconfig;/scripts/rebuildnsdzones;/scripts/rebuildhttpdconf;service httpd restart
+
+
+FOR RSYNC in mailstore
+# You need to allow connections via port 22 to dest. server using iptables. Run this before:
+root@mailstore01:~# iptables -I INPUT -d $WC#.au.syrahost.com -p  tcp --dport 22 -j ACCEPT 
+
+
+
+inode
+echo "Detailed Inode usage for: $(pwd)" ; for d in `find -maxdepth 1 -type d |cut -d\/ -f2 |grep -xv . |sort`; do c=$(find $d |wc -l) ; printf "$c\t\t- $d\n" ; done ; printf "Total: \t\t$(find $(pwd) | wc -l)\n"
+
+---------------------------------------------------------------
+
+
+
+append date
+$(date +%F_%R)
+
+Elvic.W
+xd-7O-E0
+
+
+
+Adminhost â€“ Hosting orders
+https://staff.enetica.com.au/admin/searchAdminhost.cgi
+
+Enetica Admin â€“ Domain orders
+https://staff.enetica.com.au/admin/index.cgi
+
+DNS Admin  - DNS administration
+https://staff.enetica.com.au/dns/
+
+
+Finding Stealrat can be as simple as running the following command on UNIX-like systems - for "[dirs]", substitute in the web server document root, CGI and image directories:
+
+ find [dirs] -print | xargs -d'\n' grep 'die(PHP_OS.chr(49).chr(48).chr(43).mddx5(0987654321'
+ 
+ 
+ 
+ HIGH LOAD
+ /usr/local/scripts/kill_top_php.sh
+ 
+ 
+ 
+ mod sec
+ 
+ grep ModSecurity /usr/local/apache/logs/error_log | grep -a '120.22'| sed -e 's#^.*\[id "\([0-9]*\).*hostname "\([a-z0-9\-\_\.]*\)"\].*uri "#\1 \2 #' | cut -d\" -f1 | sort -n | uniq -c | sort -n | grep nzmodels.com
+
+ grep ModSecurity /usr/local/apache/logs/error_log | sed -e 's#^.*\[id "\([0-9]*\).*hostname "\([a-z0-9\-\_\.]*\)"\].*uri "#\1 \2 #' | cut -d\" -f1 | sort -n | uniq -c | sort -n | grep nzmodels.com
+
+Get-MessageTrackingLog -Server EXCH01-AU.premium.exchange -start "04/16/2018" -end "04/20/2018"-Recipients admin@101site.tk -resultsize unlimited|select timestamp,eventid,sender,recipients,messagesubject|export-csv filename.csv -nti
+
+ 
+Public DNS	ec2-54-79-67-71.ap-southeast-2.compute.amazonaws.com
+User name	Administrator
+Password	
+lVF5cXd7G;H=V;5=i*Qer%D5!QDP&*5i
+
+
+
+connect vps in NL
+look for node ip
+prlctl enter host.risqueboutique.com
+
+windows admin XWFG2zAEmZqB)%g
+
+wincloud01 dcpr1k9K
+wincloud01.uk REwydGrsp4nHFZe
+
+
+12141595742
+
+find . -name '*.zip' -delete;find . -name '*.tar.gz' -delete;find . -name '*.mp4' -delete; find . -name '*.mov' -delete;find . -name '*.jpa' -delete;find . -name '*.mp3' -delete;find . -name '*.flv' -delete;find . -name '*.wpress' -delete
+
+
+
+\\DREAMSC-LQEKF4S\c$\Windows\Web\Wallpaper\Dreamscape
+
+
+
+cameras-10f.ceb02.ds.network
+
+192.168.156.246(Preferred)
+WIN-HOUUAVHE837
+
+SMTP 
+https://crazydomains.zendesk.com/agent/tickets/14347048
+
+
+
+Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System
+
+0 - Center
+1- Tile
+2 - Stretch
+3 - Fit
+4 - Fill
+
+SYNC DNS with new HOST ZONE
+
+touch /var/named/mtconstruction.com.au.db
+/usr/local/scripts/new_sync_dns_passwords.pl 4 | grep mtconstruction.com.au
+/usr/local/scripts/new_sync_dns_passwords.pl 4 | grep mtconstr
+
+
+
+RESET Windows Server - rdp
+hyper-v (default)
+un: crazydomains
+pw: crazyVPSdo$ new: crazyVPSdomain$
+8r/aE-SBHYXg
+
+
+vzctl stop zap.kapowinteractive.com.au --kill
+
+
+git push
+git push --receive-pack=/usr/local/cpanel/3rdparty/bin/git-receive-pack ssh://air47667@116.0.23.226:2223/home/air47667/avg.git
+
+
+for i in `ps axu | grep geoscope | awk {'print $2'}`; do kill -9 $i; done
+
+
+whm401
+/etc/hosts.allow 
+cpaneld: ALL
+whostmgrd: ALL
+webmaild: ALL
+
+
+for ip block
+where ip= ip addresses
+where ban=fail2ban-client set auth banip 
+
+for i in $ip
+do
+echo $ban $i
+done
+
+
+find /path/to/ -type f -mtime +7 -name '*.gz' -execdir rm -- '{}' \;
+
+ips=$(cat /etc/httpd/logs/access_log | awk '{print $1}' | sort | uniq | tail -n 20)
+
+INFECTION
+
+
+find . -name '*.php' -print0 | xargs -0 sed -ie "s~$infection~ ~g"
+
+
+lusrmgr.msc
+
+
+To remove all messages from the queue, enter:
+# exim -bp | awk '/^ *[0-9]+[mhd]/{print "exim -Mrm " $3}' | bash
+
+
+fast removal of exim spool
+service exim stop
+rm -fvr /var/spool/exim/input
+service exim restart
+
+number of proc
+grep -c ^processor /proc/cpuinfo
+
+nproc --all
+
+
+stop wp from asking ftp details
+define('FS_METHOD','direct');
+
+
+nl plesk admin
+jddtEgMtLXSc42ls
+
+
+
+This is how to block an entire subnet:
+
+# iptables -A INPUT -s IPADDRESS -j DROP
+
+
+This is how to block a range of ip's within a subnet:
+
+# iptables -I INPUT -m iprange --src-range 192.168.1.10-192.168.1.13 -j DROP
+
+
+Or, if you do not want to do this manually, you can edit your /etc/sysconfig/iptables file.
+
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+allow from 123.123.123.123
+</Files>
+
+
+
+cookies wp
+setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
+
+
+
+
+To check IP in global Bitninja whitelist
+
+ipset test heimdall-whitelist-net 52.88.215.225
+52.88.215.225 is in set heimdall-whitelist-net.
+
+To check IP in global Bitninja greylist
+
+bitninjacli --greylist --check=177.19.238.230
+[info] - |Cli| Received command: [greylist] --> [check] [177.19.238.230]
+[info] - |Cli| [177.19.238.230] is on global greylist
+
+To check IP in global Bitninja blacklist
+
+ipset test heimdall-nt-blacklist 5.188.155.97
+5.188.155.97 is in set heimdall-nt-blacklist.
+
+
+To check in Dreamscape Bitninja whitelist
+
+ipset test heimdall-user-whitelist-net 213.229.98.1
+213.229.98.1 is in set heimdall-user-whitelist-net.
+
+
+OPEN VZ
+vzctl set 720 --ram 8G --swap 1G --save
+
+
+d#2h*1xCp!@K
+
+uMXlsG\#oLrlgr
+
+
+
+WHM session
+whmapi1 create_user_session user=root service=whostmgrd
+
+cpaneld
+webmaild 
+
+
+DRS Plesk
+[root@drs04 psa]# /usr/local/psa/bin/admin --get-login-link
+
+
+ssh root@ashda -i  /usr/share/access_vps/id_vps
+
+
+https://secure.hostingaustralia.com.au/admin/login.php?redirect=%2Fadmin%2Findex.php 
+un: staffsg
+ 
+>usfAv32rZLpT 
+
+
+ 
+ 
+ IPV6 break down
+ 2404:8280 = perth
+a222 = routed
+bbbb = shared hosting
+bba2 = reseller
+9 = server id
+ffff:ffff = shared IP
+so its reseller webcloud 9 basically
+it can be found in IPAM here: https://ipam.ds.network/subnets/63/7399/
+
+
+umount -l --force mount_point
+
+
+
+Please take note that these are the brands that must be moved to Integration Work pool when passing back ticket is required:
+
+-	Domain Registration Service (integration to Vodien is still ongoing)
+-	WebCity/Enetica (Billing and Accounts related only)
+-	Hosting Australia (Accounts and General Support)
+
+Should there be any concerns, please let us know.
+
+Regards,
+June
+
+
+
+whmapi1 suspend_outgoing_email user=
+
+
+PLESK LOCAL ADMIN
+
+wincloud9.au.syrahost.com
+User: localadmin
+Pass: C6DM4aTV+g
+
+Transfer tool details:
+User: localadmin 
+
+Target host â€“ Wincloud8 , password: Dream$$cape!234
+Source host â€“ Wincloud7, password: UnsEpyRg4M
+Plesk6: Pu3J4n224D 
+
+
+NIMBLE
+172.17.0.85
+172.17.0.95
+172.21.2.8
+172.21.2.12
+
+Exchange 2016 template
+https://crazydomains.zendesk.com/agent/tickets/12969844
+
+
+Hi, 
+to access https://manage.premium.exchange, https://manage.exchangecloud.com.au  use login: adm-elvic.w pwd: ZXCasdQWE123 
+To access a https://mail.exchangecloud.com.au/ecp  use login with domain - exchangecloud\login 
+To access a https://mail.premium.exchange/ecp  use login with domain - premium\login
+
+https://portal.dreamscapenetworks.com/Support/WIKI-Support/Pages/Products/Exchange%20product/Tier_2_Exchange_2016_Migration_Guide.aspx
+
+pc administrator
+ML101ZAvB
+
+
+http://filter3.au.syrahost.com/cgi-mod/index.cgi
+username: tier2@syrahost.com
+password: roJ7yay7shiesheuXae8 
+
+x
+jzjpfQQE7nLxbDyBZlOnv5
+
+f1oOKCjpZMpJyCxwxIlGFs
+root
+
+dreamscape.networks 
+$kyP3p@s$
+
+
+HOTMAIL
+paypal pass
+a0793e48294f9e4e84a@hotmail.com
+dogbite12
+
+YAHOO
+crazydomains.2017@yahoo.com
+
+YOU OWE YOUR SAVINGS 2000
+
+IP: 192.168.42.53
+root password: 23tsdfssg 
+
+IP: 192.168.42.54
+Username: root
+Password: 23tsdfssg
+
+
+root:TzPmpnFeBs42fWChVt7D 
+
+HostGator Cpanel: https://gator2009.hostgator.com:2083/
+Domain:               justababy
+Server IP:         50.87.144.109
+
+http://dev-12-2016.justababy.co/
+
+Username: gdowg
+PW: dbQb28eeaq:Z
+
+http://justababy.co/wp-admin/
+Username: gerard
+PW: engpx3A6LnygqHN
+
+webcloud
+austhost
+PlMD3m5NusIaOS9EVVLg 
+
+
+
+EzioAuditore4321
+
+wincloud8
+austhost
+Plesk:  PlMD3m5NusIaOS9EVVLg 
+
+
+"v=spf1 +a +mx a:server-2-r5.ipv4.au.syrahost.com include:_spf.syrahost.com -all" 
+
+
+"v=spf1 +a +mx +ip4:27.54.80.48 +ip4:27.54.87.24 ~all"
+
+flippinpatty28
+lopez.ahna@yahoo.com
+
+senpai
+ssh raibuotc@103.226.223.2
+g4VkGhH7RF
+
+PLESK6
+austhost
+PlMD3m5NusIaOS9EVVLg
+
+PLESK5
+Austhost
+Vm1l%j29
+
+Plesk2.uk
+Agent
+Y7j5bp&5 
+
+PLESK7
+Austhost
+7Jy7eq4^
+
+EXCHANGECLOUDAU
+serveradmin
+asdGD#$%84
+
+EXCHANGECLOUDEU
+serveradmin
+asd@#$HGfh^&8
+
+PLESK2
+austhost
+Gydi8~36
+
+wget [URL] --user=foo --password=bar --auth-no-challenge
+
+dreamscape_test_acc@yahoo.com
+;Q5zXv9hr6%X
+
+dreamscape_test_acc@outlook.com
+^BLL8L#S!i0E
+
+dreamscape_test_acc@icloud.com
+tE$T!@34
+
+dreamscape.test.acc@gmail.com
+TO-0pZ3!BqG~
+
+Gmail: 
+Username: help.crazydomains.test@gmail.com
+
+Hotmail:
+Username: help.crazydomains.test@hotmail.com
+
+Yahoo: 
+Username: helpcrazydomainstest@yahoo.com
+
+
+Password : YbEPmSnNA67vBR5 
+
+
+
+
+
+https://wincloud9.au.syrahost.com:8443/admin/
+Support-Bugatti
+Mpd7k38%
+
+
+
+root@webcloud71 [~]# dig ns pottyplant.com.au +short
+ns8318.hostgator.com.
+ns8317.hostgator.com.
+
+
+Libe Password
+Dreamliveskai1234#
+
+Web
+Fz?b7-J!wLtY
+
+WEB CITY
+Hi, 
+
+Please find the links to the Webcity billing system and cpanel servers below.
+
+
+Webcity Billing system
+Credentials: Sent in previous email
+
+Adminhost â€“ Hosting orders
+https://staff.enetica.com.au/admin/searchAdminhost.cgi
+
+Enetica Admin â€“ Domain orders
+https://staff.enetica.com.au/admin/index.cgi
+
+DNS Admin  - DNS administration
+https://staff.enetica.com.au/dns/
+
+
+Webcity Cpanel SSH
+SSH Port 2223
+Host: {{servername}}.instanthosting.com.au
+Credentials â€“ Provided in previous email.
+
+Elvic.W
+xd-7O-E0
+SSH
+s7dED**y
+
+
+vq93ynr9yq3r3c2
+
+
+
+
+
+wincloud01
+dcpr1k9K
+
+
+124
+039
+224
+
+
+OpenVZ1
+nladmin ~7cTI\C,
+
+
+SSS
+Vq93ynr9yq3r3c2
+
+
+
+Hello,
+
+I’m pleased to tell you your SSL certificate has been successfully installed! You can check it at the following link:
+
+https://www.sslshopper.com/ssl-checker.html?hostname=lilimichaud.com
+
+If you need anything else at all, please feel free to ask.
+
+
+
+
+I would highly advise to update your Wordpress version, themes, and plugins.
+Please be advised to update all your passwords related to site as well as secure
+all your forms like adding Captcha on them. We strongly
+encourage our customers to protect their web hosting account. In support of that
+we are offering a new tool Protection Power. This service is real time
+protection from hackers and exploits. More information can be found at
+https://www.hostpapa.com.au/protectionpower-website-security/.
+
+If you need anything else at all, please feel free to ask.
+
+
+
+
+aibot
+
+wget url -0 ai-bolit-en.zip; unzip ai-bolit-en.zip
+php ai-bolit/ai-bolit.php --path="PATH" --mode=2 --size=1000k -l scan.log
+
+
+
+
+1. go to http://192.168.1.1/fh
+2. login as fiberhomesuperadmin
+3. password is sfuhgu
+
+
+default
+IP Address	
+49.148.36.178
+Subnet Mask	
+255.255.224.0
+Default Gateway	
+49.148.32.1
+Primary DNS Server	
+122.2.166.161
+Secondary DNS Server	
+122.2.165.173
+
+
+----------------------
+
+
+IP Address	
+100.87.87.172
+Subnet Mask	
+255.255.0.0
+Default Gateway	
+100.87.0.1
+Primary DNS Server	
+122.2.166.161
+Secondary DNS Server	
+122.2.165.173
+ 
+ -------------------
+
+UPDATE `wp9g_options` SET `option_value` = 'NEWURL' WHERE `wp9g_options`.`option_name` = 'siteurl';
+UPDATE `wp9g_options` SET `option_value` = 'NEWURL' WHERE `wp9g_options`.`option_name` = 'home';
+
+
+
+filecount
+
+<?php
+function scan_dir($path){
+    $ite=new RecursiveDirectoryIterator($path);
+
+    $bytestotal=0;
+    $nbfiles=0;
+    foreach (new RecursiveIteratorIterator($ite) as $filename=>$cur) {
+        $filesize=$cur->getSize();
+        $bytestotal+=$filesize;
+        $nbfiles++;
+        $files[] = $filename;
+    }
+
+    $bytestotal=number_format($bytestotal);
+
+    return array('total_files'=>$nbfiles,'total_size'=>$bytestotal,'files'=>$files);
+}
+
+$files = scan_dir('./');
+
+echo "Total: {$files['total_files']} files, {$files['total_size']} bytes\n";
+//Total: 1195 files, 357,374,878 bytes 
+?>
+
+
+
+
+*/5 * * * * sync; echo 1 > /proc/sys/vm/drop_caches
+*/5 * * * * sync; echo 2 > /proc/sys/vm/drop_caches
+
+mx.yourdomain.com.cust.a.hostedemail.com. (priority 0)
+
+
+
+-- 
+Regards,
+
+Elvic W.
+Technical Support Representative
+HostPapa Inc.
+
+
+
+
+domain="mpstaging2.space"; for i in `seq 1 1 `; do let i=$i+1 ; let  k=$i-1 ; let s="$(date +%s) - (k-1)*86400"; let t="$(date +%s) - (k-2)*86400"; echo `date -Idate -d @$s`; /usr/local/cpanel/bin/dcpumonview `date -d @$s +%s` `date -d @$t +%s` | sed -r -e 's@^<tr bgcolor=#[[:xdigit:]]+><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td></tr>$@Account: \1\tDomain: \2\tCPU: \3\tMem: \4\tMySQL: \5@' -e 's@^<tr><td>Top Process</td><td>(.*)</td><td colspan=3>(.*)</td></tr>$@\1 - \2@' | grep $domain -A3 ; done
+
+
+/scripts/dnscluster synczone $Domain	
+
+_dmarc.kdb-consultancy.com v=DMARC1; p=reject;
+
+
+Allow remote domains
+
+/var/cpanel/cpanel.config
+
+More precisely the line:
+
+allowremotedomains=0
+	
+	
+	
+/usr/local/apache/htdocs
+
+
+is to skiphomedir restore on destination server
+then go on source server with ssh pro102
+sudo su -
+and I am with root
+and I always start the rsycn with screen
+and I use this command rsync -avrt /home/username/ net@11.11.11.11:/home/username/
+and I use the password of the account that I want to migrate
+
+Jason [3:04 PM]
+ok make sense now
+
+Bogdan Abageru [3:05 PM]
+and sometimes you might need to do something else, add the rsync process in pignore here: /etc/csf/csf.pignore where you add: exe:/usr/bin/rsync and reload csf
+make sure to remove the line once the rsync is complete
+it happens with sme large files for the server to kill the rsync process but by doing the above it will be fine
+and always using screen :slightly_smiling_face:
+
+
+
+	
+
+
+Please note that the migration of the account is now completed to the new HostPapa server. You should have received your updated account information as Welcome Email to the email address listed on file. If you have not received your
+updated account information, please contact us by replying to this email.
+
+Please login to your new server and verify that your site and account features
+are functioning properly. Your account will be terminated from the old server in
+96 hours. To access the new server please use the link below with your
+username/password:
+
+
+
+bash <(curl -s http://andyvasile.net/s/getspam.sh) smartfeltfactory.com 
+
+
+
+
+# pldt fibreuser 
+Usernames: f~i!b@e#r$h%o^m*esuperadmin
+Passwords: s(f)u_h+g|u
+
+
+
+
+Wordpress malware attack happens because of outdated Wordpress/plugins/themes.
+Plugins are responsible for the majority of the Wordpress
+attacks. Even worse, some plugin and themes developers abandon fixing the
+vulnerable plugins for years. So please always make sure to update your
+Wordpress/plugins/themes, check each plugin and themes that you don't need and
+delete it (deactivation is not enough is the files will be still on the
+account), and please check our security guides and recommendations here:
+https://hostpapasupport.com/secure-wordpress-website/
+https://www.hostpapa.com/blog/security/what-to-do-if-your-wordpress-website-was-hacked/
+https://www.hostpapa.com/blog/technology/5-best-wordpress-security-plugins/
+https://hostpapa.blog/security/10-tips-boost-wordpress-security/
+
+
+Please note, your Protection Power service has detected some malware and is in the process of cleaning it up now. We will keep you updated on the cleanup process.
+
+
+Thanks for looking into this. We appreciate your efforts in getting this issue resolved with us. We will await your updates.
+We have successfully completed the malware quarantine / cleaning operations on your domain boissevain.ca. If you feel we have missed anything, please do get back to us with information on the files you feel are suspicious / malicious and we would be happy to re-investigate the issues.
+
+We also request you to audit the accounts associated with the web application and also change any/all credentials (FTP, cPanel, Database, Web-application specific user accounts, etc.) and also maintain good password hygiene (strong
+passwords, regular recycling, etc.) if you are not already doing so, for an improved security stance.
+
+
+mx.tinandfeather.ca.cust.a.hostedemail.com
+
+
+
+The individual upload file limits on the packages are as follows:
+3 page = 5mb
+Unlimited = 100mb
+Premium = 500mb
+The file storage size on each plan is as follows:
+3 page = 25mb
+Unlimited = 2Gb
+Premium = 5Gb
+
+
+
+==============================================================
+
+domain="ciekt075"; for i in `seq 1 1 `; do let i=$i+1 ; let  k=$i-1 ; let s="$(date +%s) - (k-1)*86400"; let t="$(date +%s) - (k-2)*86400"; echo `date -Idate -d @$s`; /usr/local/cpanel/bin/dcpumonview `date -d @$s +%s` `date -d @$t +%s` | sed -r -e 's@^<tr bgcolor=#[[:xdigit:]]+><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td></tr>$@Account: \1\tDomain: \2\tCPU: \3\tMem: \4\tMySQL: \5@' -e 's@^<tr><td>Top Process</td><td>(.*)</td><td colspan=3>(.*)</td></tr>$@\1 - \2@' | grep $domain -A3 ; done
+
+
+==============================================================
+imapsync --nofoldersizes --skipsize --fast \
+--host1 imap.secureserver.net --user1 alejandra.castillo@sipnored.com --password1 'NoredEmpresarial+1o' --ssl1 \
+--host2 hp260.hostpap --user2 alejandra.castillo@sipnored.com --password2 'NoredEmpresarial+1o' \
+--automap "$@" --sslargs1 SSL_verify_mode=0 --sslargs2 SSL_verify_mode=0
+
+
+imapsync --skipheader  --nosyncacls -syncinternaldates --nofoldersizes --skipsize --fast \
+--host1 imap.secureserver.net --user1 johnny@johnnylucas.com --password1 'Tumbakasa123' --ssl1 \
+--host2 hp252.hostpapa.com --user2 johnny@johnnylucas.com --password2 'Tumbakasa' \
+--automap "$@" --sslargs1 SSL_verify_mode=0 --sslargs2 SSL_verify_mode=0
+
+
+==============================================================
+
+<IfModule security2_module>
+    SecRuleRemoveById 33339 77140730 77210492 33339 
+    </IfModule>
+
+
+==============================================================
+
+for i in $(grep textu431 /var/log/malware_report.log | grep home); do chattr -ia "$i"; chmod 644 "$i"; done
+
+cl-quota -u 
+
+su - USER -s /bin/bash
+
+grep USER /etc/trueuserowners | cut -d: -f1
+
+
+
+==============================================================
+
+A VPN is a tool that tunnels through a network. It basically encrypts/secure a connection between two machines. 
+
+MyISAM default mysql storage
+innodb is faster compared to myisam when it comes to updating tables
+
+https://superuser.com/questions/8077/how-do-i-set-up-ssh-so-i-dont-have-to-type-my-password
+
+RAID 5 is most commonly used. used for parity with striping
+RAID 10 is an combination of RAID 1 and 0 for mirroring
+
+
+
+==============================================================
+
+imunify360-agent malware malicious list --user impre082 --limit
+600 > /home/impre082/malwarescan-results.txt
+
+
+
+==============================================================
+
+1. Enable gzip compression for your sites: 
+https://hostpapasupport.com/enable-gzip-compression-sites/
+
+2. Enable Leverage browser caching:
+https://hostpapasupport.com/leverage-browser-caching/
+
+3. Replace default Wordpress cron with the real cronjob: 
+https://hostpapasupport.com/replace-wordpress-cron-real-cronjob/
+
+4. Use caching plugins for your Wordpress installations, you can use one of the
+following plugins which will best fit your needs:
+https://wordpress.org/plugins/w3-total-cache/
+https://wordpress.org/plugins/wp-super-cache/
+https://wordpress.org/plugins/wp-fastest-cache/
+
+5. Limit or stop Wordpress HeartBeat on your Wordpress installations:
+https://hostpapasupport.com/wordpress-heartbeat-configure/
+
+
+==============================================================
+
+Place it in your Host File: 127.0.0.1 platform.wondershare.com 
+
+Filmore Serial Keys: 
+
+
+Licensed e-mail: c2941690@drdrb.com Registration code: 510B3C20A9E54E0FF1D2FC28BADl220E
+
+Licensed e-mail: c2942163@drdrb.com Registration code: 35706E040C63EE00E377911BB9A3B301 
+
+Licensed e-mail: c2942269@drdrb.com Registration code: 00289623F7B3B81E14AEB526144B6D08 
+
+Licensed e-mail: c2943267@drdrb.com Registration code: D772BE0279AFE60AF0E1D2109CA89A19 
+licensec E-mail: c2941690@drdrb.com Reg. code: 510B3C20A9E54E0FF1D2FC28BAD1220E 
+
+licensec E-mail: c2943267@drdrb.com Reg. code: D772BE0279AFE60AF0E1D2109CA89A19 
+
+Licensed e-mail: c2941647@drdrb.com Registration code: 10403029CF3644154841651AF141E800
+
+
+----------- email limits ------------
+
+The limit is 250 recipients in a 24 hour period.
+
+
+------------------------------------------------------
+create snapshot
+
+vgs - display volume group
+
+lvmxen for vps
+
+lvs | grep SERVERNAME
+
+snapshot
+lvcreate -s -n SNAPSHOT-NAME -L 15G LOCATION
+
+snapshot = 
+
+rollback
+
+
+------------------------------------------------------
+
+
+cd /var/cpanel/
+mv userdata userdata.orig
+mkdir userdata
+/usr/local/cpanel/bin/userdata_update --reset
+/usr/local/cpanel/bin/fix_userdata_perms 
+/scripts/updateuserdatacache 
+/scripts/rebuildhttpdconf 
+/scripts/restartsrv_httpd 
+
+
+
+==============================================================
+
+I used the following  user details for Admin Access or the so called Maintenance Account for PLDT Home Fibr Modem HG6245D
+
+IP Address: 192.168.1.1/fh
+Username: f~i!b@e#r$h%o^m*esuperadmin
+Password: s(f)u_h+g|u
+
+
+Usernames: adminpldt
+Passwords: z6dUABtl270qRxt7a2uGTiw
+
+mariza
+adminpldt
+admin1234
+
+
+==============================================================
+
+intial sync
+the design co
+
+Source
+103.250.232.23 Port 2828
+server.thedesigncompany.co.nz
+tdcNZ2014
+
+tdcNZ2014
+
+Destination
+server2020.thedesigncompany.co.nz
+H5r0pgfBzBsz
+
+
+
+120.138.16.6
+
+
+real    55m42.996s                                           
+user    0m12.981s                                            
+sys     0m10.108s     
+
+andrew.h@gamechangers.co
+Bethech@nge1177
+
+vewxyw-kehsuq-3bemMi
+
+
+
+
+----- detailed smtp log ------
+
+"Debug=YES " to the "./container/config/ssmtp/ssmtp.conf"
+
+
+
+uapi --user=buzzaudi DomainInfo single_domain_data domain=audioshop.co.nz
+
+docker logs nginx-proxy --tail 300000 | grep "07/Nov/2020" | grep nzsurfjournal.com | awk '{print $4}' | sort | uniq -c | sort -h | tail -n 10
+
+docker logs nginx-proxy --tail 300000  | awk '{print $4}' | sort | uniq -c | sort -h | tail -n 10
+
+
+==============================================================
+
+define( 'DB_NAME', 'purerehu_wp694' );
+
+/** MySQL database username */
+define( 'DB_USER', 'purerehu_wp694' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', '-93(ISp2Wb' );
+
+
+
+info@mvdesign.co.nz
+
+
+==============================================================
+
+exclude AUTOSSL
+
+
+whmapi1 add_autossl_user_excluded_domains username=example domain=cpcalendars.example.com domain=webdisk.example.com
+
+
+==============================================================
+
+REFRESH RENOVATIONS
+https://confluence.sitehost.co.nz/display/PROJECTS/Traffic+-+Refresh+Renovations+Replication
+
+TEST OUTLOOK
+yeahwaah@outlook.com
+
+
+-------------------------------------------
+
+netstat -ntupwc | grep ":22"
+
+-------------------------------------------
+
+IPTABLES EXAMPLE:
+
+iptables -I INPUT_CHAIN -s SOURCE_IP -p protocol --dport DST_PORT -j DROP
+iptables -I DOCKER-USER -s SOURCE_IP -p protocol --dport DST_PORT -j DROP
+
+--------------
+
+
+journalctl --disk-usage
+
+
+
+------
+
+mod sec
+
+/etc/apache2/conf.d/userdata/ssl/2_4/username/modsec.conf
+/etc/apache2/conf.d/userdata/std/2_4/username/modsec.conf
+
+
+
+e add dayon ang ID
+
+
+==============================================================
+
+<IfModule security2_module>
+    SecRuleRemoveById 214940 214620 214450
+</IfModule>
+
+
+<IfModule mod_security2.c>
+SecResponseBodyLimit 546870912
+</IfModule>
+
+
+==============================================================
+
+3lWVZgGcWb
+
+host - taranaki.webslice.co.nz or 103.250.232.127
+port - 21
+protocol - ftp
+encryption - only use plain ftp
+logon type - normal
+user - webslice@parp.co.nz
+password - GzVoeXEX5z
+
+cloud container ban
+look in /var/log/fail2ban.log
+ban lasts for 10 minutes
+
+ 1980  find . -type f -name "*crontab*"
+ 1981  find . -type f -name "*crontab*" -exec grep -H "codi" {} \;
+
+
+
+pioneernursery.co.nz
+
+ls -l /data/docker0/www/*/crontabs
+
+
+
+SMTP in docker
+/data/docker0/infrastructure/smtpd/logs/postfix
+
+
+Rd2R3AwqW
+
+
+ip-sec
+ip link ls
+
+press 1 for phone alerts
+
+/etc/init.d/ipsec status - ipsec
+
+quintins words of wisdom
+
+Based on this I would recommend we close that alert. If you do ever find yourself on a box you don't know. Run history and have a look at the process list:
+
+ps axf
+
+
+
+t's worth noting the LVE limits are in place to avoid a single account/website exhausting the server resources, causing other websites to perform poorly.
+
+
+LSAPI issues
+php version in multiphp manager needs to be set to inherit
+
+
+
+Error: Query Failed: This Command Can Not Be Performed While The Domain Is Under A Change Of Registrant 60 Day Lock
+
+When changes are made to the domain's Registrant details, international domains automatically apply a 60 day no transfer lock to prevent domains from being stolen or maliciously transferred. We have no control over this and the only option available is to sit out the 60 days and then you will be able to transfer the domain.
+
+Sorry about the inconvenience that this may cause.
+
+
+check port usage
+
+lsof -i :587
+
+#BACKUP IPTABLES
+iptables-save > OUTPUT FILE
+
+#RESTORE IPTABLES
+iptables-restore < OUTPUT FILE
+
+mysql port 3306 has been opened by the cPanel firewall script
+local/internal connections
+
+
+Hi MaxGen Media Team,
+
+During a routine security scan, we noticed that port 3306 is open on your  "maxgen" server.  Could you confirm if there are no external systems that require remote access to MySQL?
+
+Thanks,
+Elvic
+
+#signature
+#cut
+
+====================================================================================
+
+search for containers
+docker ps -a CONTAINERID
+
+
+broken mounts
+https://cerb.sitehost.co.nz/profiles/ticket/BIE-69659-446/conversation
+
+restic
+restart restic
+root@ch-goodpixel:/data/docker0/backup/hosts/cce92d25692e419b/2020-05-22_14:21:05/application/public# service restic status
+●
+
+Had help from @paulus with this.
+
+To get rid off the ??? issue shown below:
+
+pimnutrisearch@ch-goodpixel:~/container$ ls -lah
+ls: cannot access 'backups': Transport endpoint is not connected
+total 24K
+drwxr-xr-x 7 root root 4.0K May 23 02:21 .
+drwxr-xr-x 1 root root 4.0K May 21 13:37 ..
+drwxr-x--- 3 pimnutrisearch pimnutrisearch 4.0K Apr 17 08:34 application
+d????????? ? ? ? ? ? backups
+
+Paulus stopped restic on the server and then attempted to unmount the /data/docker0/backup directory
+umount -l /data/docker0/backup
+
+Restic was then restarted again. Following this we could see that the ???? issue with permissions on the backups directory was gone
+
+We were still unable toa ccess the backup directory however. Still received the "Transport endpoint is not connected" error.
+
+After this, the SSH container was removed manually:
+
+docker stop sshuser
+
+docker rm sshuser
+
+Once we logged in again using the SSH user, we were able to access the backup directory
+
+
+====================================================================================
+
+
+redis issue
+like
+Sending Alert For Interval: 25 to: elvic@sitehost.co.nz
+Host: salt-nct-ma1:redis-server - proc redis-server - CRI - Tag: production, managed
+
+try provisioning a CC on that location
+
+
+===========================================================================================\
+
+
+Paulus Weingartz
+,
+28 mins
+,
+on the salt-nct master there is a process that monitors the number of redis processes:
+root@salt-nct-ma1:~# ps auxwwwwf |grep riemann-proc |grep redis
+root     17646  0.1  0.1  58200 10764 ?        Ssl  08:59   0:00 /usr/bin/ruby2.3 /usr/local/bin/riemann-proc --host mon.sitehost.co.nz --proc-regex=redis-server --tag=production --tag=managed -o 1 -x 1 -l 60 -i 15
+
+Paulus Weingartz
+,
+26 mins
+,
+Edited,
+to translate this, it will send an alert to mon.sitehost.co.nz if the process redis-server gets below the min or max -o or -x number (in this case 1)
+the -i set the interval it does the checks so every 15 seconds
+the issue here is the -l.  this sets the TTL for the event
+
+Paulus Weingartz
+,
+24 mins
+,
+Edited,
+so if mon gets the alert and the TTL is out by 60 seconds you will see the host down alert.  Host down translates to, did not receive event or event expire (TTL)
+by default this is set to 30 and I have added a merge request a couple of weeks back to get this bumped to a higher value
+for now I have gone ahead and updated the value to 60
+I think I have done this before as well but I know this server was recently restarted to add more memory so it would have changed back to the default 30
+so just to be sure that it is indeed a false-positive check the redis-server process is running and that there is only one:
+root@salt-nct-ma1:~# ps auxwwwwf |grep redis-server |grep -v grep
+redis     2329  7.2 15.8 1824712 1631012 ?     Ssl  May21 192:23 /usr/bin/redis-server 127.0.0.1:6379
+root     17646  0.1  0.1  58200 10764 ?        Ssl  08:59   0:01 /usr/bin/ruby2.3 /usr/local/bin/riemann-proc --host mon.sitehost.co.nz --proc-regex=redis-server --tag=production --tag=managed -o 1 -x 1 -l 60 -i 15
+the second line is the one you are after
+hope that this makes sense
+
+Paulus Weingartz
+,
+16 mins
+,
+o yes, the reason why a TTL of 30 seconds is too low is most likely that mon gets a lot of metrics and it sometimes takes more than 30 seconds to process an event.  The default TTL on cloud containers are set to 300 so this gives mon 5 min before it will trigger an alert.  In the case of the salt masters, this value was set when they were set up ages ago and with our growth in servers and number of events mon needs to process, this value became to low.
+
+Elvic Waskin
+,
+12 mins
+,
+Thanks. Makes a lot of sense now. And thanks for explaining this to me. This all goes to my notes when I get back to my laptop.  
+
+On how you set the TTL, I should be able to find in the command histories right? Id be taking notes on that as well :)
+
+Paulus Weingartz
+,
+11 mins
+,
+I do not think that you need to know how to set the TTL at this stage or change it.  this needs to be done by someone senior or with more experience on how this works....this that I explained now took me 2 weeks to figure out!
+
+
+
+========================================================
+
+
+
+
+MODSEC ALLOW ALL IP
+SetEnvIfNoCase REMOTE_ADDR .* MODSEC_ENABLE=Off
+
+==========================================================
+
+
+
+
+	CPANEL RSYNC
+
+	rsync -auvP -e "ssh -i ~/.ssh/designco-migration2" --log-file=/home/migration-rsync-2.log --port=2828 103.250.232.23:/home/$i/ /home/$i
+
+
+=========================================================
+
+MIGRATION EMAIL EXAMPLE
+
+
+Hi Chris / Ana,
+
+The provision and QC is now complete, and we've done the initial sync of the required sites from the old server to the new server. Access credentials for the new server can be found at the following link:
+
+https://paste.sitehost.nz/?5fbdb167317bd84b#9rV1CfofT7hdnJsl0THrHuy1z/Y4HwQc6PpHMV0ivEE=&1
+
+Of note is we didn't bring the marlborough.build7.co.nz site across as it's a subdomain website of the build7.co.nz domain, and we'd need to pull that whole domain over to bring marlborough.build7.co.nz over too. 
+
+The next step is for your team to test the sites and make sure they're all working as expected on the new server - we recommend the use of a hosts file for this pointing to the new server's IP address - 223.165.64.79 - for example:
+
+223.165.64.79   chalkncheese.co.nz www.chalkncheese.co.nz
+
+Once you've completed the testing and everything looks good, we can schedule in a final sync of the data and coordinate a switchover of the DNS. Do you have control over the DNS for all the sites we copied? 
+
+Thanks,
+James
+
+
+========================================================
+
+
+Provisioning a new Client
+
+https://documentation.shq.nz/ops/processes/myhost-processes/provisioning-a-new-client
+
+
+
+notsocks.co.nz - One of our bigger clients
+huntingandfishing.co.nz
+
+========================================================
+
+DNS Management WebSlice
+
+https://confluence.sitehost.co.nz/pages/viewpage.action?pageId=8160199
+
+
+sample ticket
+https://secure.webslice.co.nz/people/supporttickets.php?action=view&id=59246
+
+
+============================================================
+
+
+https://kb.sitehost.nz/account/preferences
+
+sample ticket
+https://cerb.sitehost.co.nz/profiles/ticket/PJM-48293-342/conversation
+
+===============================================================
+
+
+server upgrade query
+
+sample ticket
+https://cerb.sitehost.co.nz/profiles/ticket/DBL-64819-225/conversation
+
+
+==============================================================
+
+domain renewal steps
+
+
+Michael Keightley
+
+on the summary page (the main page where you first get onto the account in WHMCS)
+scroll down to the domain section
+and find the domain
+on the left of the domain will be a white box, click on that to put a tick into it
+then at the bottom of the page click on "invoice selected items"
+this should then create the invoice for the domain renewal for that domain
+then
+log in as the client
+go to invoices
+find the new invoice and open it
+top right hand corner, select Credit Card
+Pay now
+enter in details
+pay invoice
+domain renewed
+boom
+ 
+sample ticket  https://secure.webslice.co.nz/people/supporttickets.php?action=view&id=59437
+
+
+
+==============================================================
+
+
+
+webslice-test@cutinz.com
+FaP451DGgsc
+
+techs.webslice.co.nz.
+
+ns1.webslice.co.nz
+Nameserver 2: “ns2.webslice.co.nz”
+Nameserver 3: “ns3.webslice.co.nz”
+Nameserver 4: “ns4.webslice.co.nz”
+
+==============================================================
+
+check diskspace on nodes
+
+vgs
+
+==========================================================
+
+check server on a hypervisor
+
+xl top
+xl list
+
+
+========================================================
+
+SMTP issue in mon
+
+Garth van der Watt
+
+So the reason the SMTP error came up is because you rebooted the server mentioned in chat. This sometimes then floods the mailq on mon
+So to solve this you just ssh into mon and run the following steps
+
+
+service postfix status (this should say that it's not running)
+mailq (this will show the amount of mails stuck in the queue) 
+postsuper -d ALL (clear mail queue)
+service postfix restart
+service postfix status (make sure it's up and running again)
+
+
+==================================================================
+
+Hosts with SthMon last push > 1 hour
+[nvmew01-air] Last SthMon push was more than an hour ago
+\n
+
+
+/dev/mapper/lvmsystem-lvroot was full
+
+to shrink it
+
+journalctl --vacuum-size=50M
+
+
+====================================================================
+
+
+DKIM explanation
+
+The DKIM system is a verification system that tries to ensure that an email has not been altered in transit through the use of validation keys.
+
+As such DKIM is a server-level system as you have identified. If you are sending your domain's emails through the Webslice hosted email server then there is nothing more you need to do.
+
+
+=========================
+
+SPF
+
+include:_spf.webslice/myhost/sitehost.co.nz as well. 
+
+==========================================================================
+
+
+cpanel client port exeption
+
+This is from /etc/sysconfig/iptables-fw
+
+$O -p tcp --dport 587 -m owner --uid-owner 1211 -m comment --comment "customer exception port 587: netq.co.nz" -j ACCEPT
+
+Hmm thought maybe there was an issue with the uid set in the firewall rule but everything checks out
+
+[root@web1 sitehost]# id netqco
+uid=1211(netqco) gid=1214(netqco) groups=1214(netqco)
+
+
+sample ticket
+https://cerb.sitehost.co.nz/profiles/ticket/PIG-81868-652/conversation
+
+==================================================================
+
+
+SSL checker
+https://github.com/drwetter/testssl.sh/
+
+
+===================================================================
+
+manually change custom image to base images
+https://cerb.sitehost.co.nz/profiles/ticket/TJE-78428-169/conversation
+
+sitehost@ch-arthur:~$ sudo -i
+root@ch-arthur:~# shps | grep omcpowerequipment
+6088e8622247        omcpowerequipment.co.nz               ccf48e862b6833ad    /data/docker0/www/ccf48e862b6833ad
+root@ch-arthur:~# cd /data/docker0/compose/ccf48e862b6833ad
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# ls
+ccf48e862b6833ad.env  docker-compose.yml
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# ls
+ccf48e862b6833ad.env  docker-compose.yml
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# cp docker-compose.yml docker-compose.yml.bak
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# nano docker-compose.yml
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# docker ps | grep ccf48e862b6833ad
+6088e8622247        registry-clients.sitehost.co.nz/g_962241/plato-ss3-56:1.4-3696           "/usr/bin/supervisor…"   6 months ago        Up 7 days           80/tcp                                                          ccf48e862b6833ad
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# docker-compose up -d
+Recreating ccf48e862b6833ad
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad# docker ps | grep ccf48e862b6833ad
+b8fb427ae103        registry.sitehost.co.nz/sitehost-php71-apache:2.1.1                      "/usr/bin/supervisor…"   7 seconds ago       Up 5 seconds        80/tcp                                                          ccf48e862b6833ad
+root@ch-arthur:/data/docker0/compose/ccf48e862b6833ad#
+
+supervisor handles all services in the container
+
+================================== FAILED NVMES ===================================
+lsblk
+
+watch
+
+mdadm --remove /dev/RAID /dev/disk
+
+
+========================== SSL RENEW =============================
+
+https://cerb.sitehost.co.nz/profiles/ticket/CDK-93796-433
+
+
+
+========================= TLS CHANGE ============================
+https://cerb.sitehost.co.nz/profiles/ticket/AFS-81962-859/conversation
+
+
+
+
+
+
+
+
+=============
+
+journalctl --since "2 hours ago" | grep ssh | grep Accepted
+
+====== PRIMARY DOMAIN CHANGE WHERE THE NEW DOMAIN EXISTS ON THE ACCOUNT ====
+
+https://secure.webslice.co.nz/people/supporttickets.php?action=view&id=61553
+
+
+
+
+mysqlcheck -r -A -h mysql57
+
+
+
+
+
+================================
+
+support keepass
+3pcj4wwC3cEgCgm
+
+Link: https://www.secureapi.com.au/reseller/home/home/
+Username: domainsdirect
+Password: t3mppa55w0rd$$
+
+
+=================================
+
+backboss backups
+
+~/Documents/tools/lyndons-toolbox/find-backups.sh HYPERNAME
+
+/data/backup/HYPERNAME/.zfs/snapshot/DATE/lvmbackup/lvmxen/VPSNAME
+
+
+
+
+===========================================
+
+disk threshold for cloud containers
+
+less /data/docker0/infrastructure/collectd/config/collectd.d/thresholds_dfdata.conf
+
+
+==================================================================
+
+DOMAIN VERIFICATION EMAIL
+
+
+
+Hi there,
+
+We've been recently contacted by our upstream provider regarding the verification of the domain "". Whenever a domain's registered, information is updated, or is transferred, the registrant contact will be sent a verification email to verify the changes that have been made. We have requested another verification email to be sent to the registrant contact "". Please make sure this verification email is actioned as lacking to do so will risk the domain being suspended.
+
+Feel free to let us know if you have any questions.
+
+Cheers,
+
+sample ticket - https://cerb.sitehost.co.nz/profiles/ticket/HRD-49965-858/conversation
+
+
+
+
+SHRINK LOGS
+
+journaltl --disk-usage
+journalctl --vacuum-size=50M
+
+
+==================================
+cloud container usage
+
+docker stats
+
+
+friday - 
+ 	
+issue
+
+
+
+
+
+root@ch-livespark:/home/sitehost# journalctl --since "1 hour ago" | grep 131.203.244.186 |awk '{print $15}' | sort | uniq -c | sort -h | tail -n 5
+
+Nov 25 02:48:41 ch-livespark sshd[19088]: Accepted publickey for aspiringlawprod from 131.203.244.186 port 55944 ssh2: RSA SHA256:TGW+/XGCgZDmgxuQWyLSNNFAIR9h3ZH4zKIDvm4kIh8
+
+
+
+
+root@ch-focus360:/home/sitehost# ps -eo pcpu,pid,user,args | sort -hr | head -5
+10.1    42 root     [kswapd0]
+ 4.8   994 root     /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -s overlay2
+ 4.7 12255 www-data php-fpm: pool www
+ 2.6  3006 root     /opt/sbin/collectd -f -C /etc/collectd/collectd.conf
+ 2.5  6430 root     containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/f7d8586ce0b9882eb889a4950cc5323c2ee9eb1f77592e1c59230fa24c14dfeb -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+
+
+================== TIER3 ACCESS ===========================
+
+Windows VPS > Chris Chew
+Dedicated Server - Heder Hasan
+
+rsync -av -e ssh PATH DESTINATION
+
+
+prekill storage
+/backup-server/current/incremental/accounts/prekillstore
+
+
+============= PRTG checking =============
+
+vi /etc/snmp/snmpd.conf
+
+disk / 10%
+disk /vz 10%
+syslocation  "Singapore 609921"
+syscontact  support@vodien.com
+sysservices 79
+rocommunity vodien128 172.22.102.32
+rocommunity vodien128 103.9.102.32
+yum -y install net-snmp-utils net-snmp
+chkconfig snmpd on
+service snmpd start
+
+
+Backup Admin - Andre Yong
+
+
+
+================ MAGENTO COMPOSER ================
+
+Create installer.sh on the root folder of the website
+installer.sh can be found in https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
+Root folder means eg. /home/user/public_html if it is main domain, if it is addon domain abc.com, it is /home/user/public_html/abc.com/
+Change permission to 750 for installer.sh
+
+
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento indexer:reindex
+php bin/magento cache:flush
+
+
+================ MAGENTO COMPOSER ================
+
+
+
+==== USER PROCESS KILL ====
+
+pkill -f lsphp -u USER
+
+==== USER PROCESS KILL ====
+
+
+============= REMOVE AN IP IN IPSET =============
+
+ipset del SETNAME IP
+
+============= REMOVE AN IP IN IPSET =============
+
+
+========== PRTG DISK ALERTS ==================
+
+for vps, you can check on disk usage via vpsdiskusage.sh
+for hwnodes , you can clear the logs via /root/vdnserverscriptvz/clear_disk.sh
+for shared , you can run a disk space maintenance via /root/vdnserverscript/maintenance/clear_disk_space.sh
+
+
+========== PRTG DISK ALERTS ==================
+
+
+
+==================== CENTOS7 SELF MANAGE ================================
+
+HW node - "v1026.sgsvr.com"
+
+step 1 license check
+step 2 check if IP is available
+step 3 set the proper specs
+step 4
+#now we construct the servername & hostname
+SERVERNAME="v$THIRDOCTET$LASTOCTET.serveradd.com"
+HOSTNAME="v$THIRDOCTET$LASTOCTET.serveradd.com"
+NEWCTID="99$THIRDOCTET$LASTOCTET"
+NS1="ns1.$HOSTNAME"
+NS2="ns2.$HOSTNAME"
+
+step 5 setup RDNS
+
+step 6
+
+#NOW WE CALL THE LINK TO ACTIVATE THE CHILD/GLUE NS RECORD
+#DISABLE FIRST
+echo "Activating CHILD/GLUE NS Record"
+curl -q "http://calllog.vodien.com/domain/resellerclub-childnameserver.php?dns=serveraddcns&ipaddress=$IPADDRESS"
+
+
+==================== CENTOS7 SELF MANAGE ================================ 
+
+
+================ FULLY MANAGE SERVER ACTIVATION ====================
+
+
+[9:52 AM] Ivan Chan | Dreamscape Networks
+    
+For fully Managed server , need to install the following
+
+
+
+
+ 
+================ FULLY MANAGE SERVER ACTIVATION ====================
+
+
+========================== SSL INSTALL ORION SERVERS ===================================
+
+
+Install SSL in Orion
+
+Covert CRT to PFX
+
+1. Make sure you already have the CRT and PK
+2. Go to https://www.sslshopper.com/ssl-converter.html
+3. Select Type To Convert to - PFX
+4. Type of Current Cert - Standard PEM
+5. Upload the CRT and PK
+6. Add a password
+7. Click on Convert
+
+Upload the PFX file in the clients File Manager in WebsitePanel
+
+Installing the PFX file
+
+1. RDP into the orion server
+2. Open the IIS Manager
+3. Go to IIS > Server Certificates
+4. Go to Actions > Import
+
+Bind the new cert
+
+1. In IIS go to Sites > website
+2. Actions > Bindings
+3. Edit https and look for the cert you uploaded
+
+========================== SSL INSTALL ORION SERVERS ===================================
+
+
+PLDT TICKET 377 344 13
+
+
+======= JETBACKUP ADD SUBSCRIBER IN WHM ===========
+
+1) Go to web120.vodien.com's WHM
+2) Go to Jetbackup via WHM
+3) Click on "Backup Job"
+4) Click on "Manage Account Filters"
+5) Click on "7 days subscriber"
+6) Click on "Manage account Filters"
+7) Enter the cPanel account user on the Accounts, and add the user
+8) Appy the changes
+
+======= JETBACKUP ADD SUBSCRIBER IN WHM ===========
+
+
+======= web servers backup location ========
+
+[8:55 AM] Jayvee Sagarino | Crazy Domains
+    /pkgacct-backups/serve_hostname/
+
+======= web servers backup location ========
+
+
+====== PROVISION DDOS ============
+
+1. Connect to VPN - staffvpn-ocserv2.vodien.com
+2. Go to https://calllog.vodien.com/sso/index.php
+3. Click on Login Cloudflare here Login
+4. In http://www.sghostmart.com/cloudflare/ 
+	- enter corporate@vodien.com and then lookup user
+	- add the domain then click on lookup ZONE
+	- then add zone(FULL)
+	- cloudflare $12 and assign plan
+5. Login to cloudflare
+6. Search the domain and check the DNS
+7. export the DNS and pushback to T2 with the details
+
+sample ticket - https://crazydomains.zendesk.com/agent/tickets/19580666
+
+====== PROVISION DDOS ============
+
+==== redirection.vodien.com taking too long? =====
+
+DUPLICATE WHILE ITS LOADING THE TABLE 
+
+==== redirection.vodien.com taking too long? =====
+
+========= PROC MEM USAGE ================
+
+
+for i in `seq 1 3 `; do let i=$i+1 ; let  k=$i-1 ; let s="$(date +%s) - (k-1)*86400"; let t="$(date +%s) - (k-2)*86400"; echo `date -Idate -d @$s`; /usr/local/cpanel/bin/dcpumonview `date -d @$s +%s` `date -d @$t +%s` | sed -r -e 's@^<tr bgcolor=#[[:xdigit:]]+><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td><td>(.*)</td></tr>$@Account: \1\tDomain: \2\tCPU: \3\tMem: \4\tMySQL: \5@' -e 's@^<tr><td>Top Process</td><td>(.*)</td><td colspan=3>(.*)</td></tr>$@\1 - \2@'
+> done
+
+
+========= PROC MEM USAGE ================
+
+
+====== MYSQL DB - MYSQL DATABASE ISSUE ===
+
+mysql_upgrade
+
+explanation - As the answer is not very explanatory, to explain what it does is that it redefines the mysql.user table, moves the existing users to an inactive state and copies the old users to the new correct format
+
+
+====== MYSQL DB - MYSQL DATABASE ISSUE ===
+
+
+========================== CHECK SPAMMER ==========================
+external login checker
+exigrep @ /var/log/exim_mainlog | grep _login | sed -n 's/.*_login:\(.*\)S=.*/\1/p' |  sort | uniq -c | sort -nr -k1
+
+hacked account
+exigrep @ /var/log/exim_mainlog | grep U= | sed -n 's/.*U=\(.*\)S=.*/\1/p' | sort | uniq -c | sort -nr -k1
+
+========================== CHECK SPAMMER ==========================
+
+
+===== COLOCATION ========
+
+https://iportal.telin.sg - DC APOINTMENT
+
+
+Vodien Data Centre 1
+Changi Singapore
+30 Changi North Way
+Singapore 498814
+
+4U - Telin
+
+========================= NEED ACCESS TO VODIEN/NL NODES ================
+
+sample tickets
+https://crazydomains.zendesk.com/agent/tickets/19804549
+
+
+================= VCENTRE CEBU VLAN ===============================
+
+vlan 700
+vlan 453
+
+
+==================== LIST SUSPENDED ===================
+
+whmapi1 listsuspended
+
+
+=============== orion web panels =================
+
+
+ORION4 - http://webcp.webhostsg.com/
+Login : simonchris
+Password : iWi!@!1202w
+
+ORION5 - http://webcp.webhostsg.com/
+Login : simonchris2
+Password : iWi!@!1202w
+
+ORION6 - http://webcp1.webhostsg.com/
+Login : serveradmin
+Password : iWi!@!1202w
+
+ORION - http://webcp2.webhostsg.com/
+Login : serveradmin
+Password : iWi!@!1202w
+
+=================== DOMAIN DOCUMENT ROOT IN CPANEL ==========================
+
+whmapi1 domainuserdata domain=$domain | grep documentroot
+
+======================== TERMINATED ACCOUNTS BACKUPS ====================
+
+ssh to v7
+then go to /pkgacct-backups
+
+
+============================ LAST REBOOT CENTOS ===================
+
+last reboot
+
+
+
+
+
+no pyxsoft
+https://crazydomains.zendesk.com/agent/tickets/19765681
+
+
+
+
+
+
+
+root@v237080 [~]# for USER in $(ps haux | awk '{print $1}' | sort -u); do ps hux -U $USER | awk -v user=$USER -v total=$TOTAL '{ sum += $6 } END { printf "%s %.2f\n", user, sum / total * 100; }'; done
+
+================= expired ssl on whm hostnames ===========================
+
+/usr/local/cpanel/bin/checkallsslcerts
+
+
+=============================
+
+magento for shared host
+
+ /usr/local/bin/php -d memory_limit=4G bin/magento setup:di:compile
+/usr/local/bin/php -d memory_limit=4G bin/magento module:enable Omise_Payment --clear-static-content
+
+
+
+
+
+
+	=================================== OPEN BY WEDNESDAY
+
+	https://crazydomains.zendesk.com/agent/tickets/20122025
+
+
+	=======================================================
+
+
+	Adding additional IP to orion servers (Windows servers)
+
+Sample ticket: #20152379
+
+Note: This is not an official documentation, in short, ako ako rani 
+
+ 
+
+Step 1: check the A record for the domain
+
+Step 2: check IP belongs to the same subnet based on the server
+
+===============================================
+
+
+[5:38 pm] Jayvee Sagarino | Crazy Domains
+    
+Adding additional IP to orion servers (Windows servers)
+
+Sample ticket: #20152379
+
+Note: This is not an official documentation, in short, ako ako rani laugh​
+
+
+Step 1: check the A record of the domain
+
+Step 2: choose an IP that belongs to the same subnet based on the server or domain A record
+
+Step 3: ping the IP, if it doesn't respond, means it is a free IP.
+
+Step 4: RDP to the server >> Network & Connections >> Properties >> IPv4 >> Properties >>  Advanced >> Add the IP
+
+
+Done
+
+(1 liked)Edited
+
+
+======================================
+
+AU root pass 7xQzvmsPAEaiaLEmA70i
+
+
+whm ssl
+
+/usr/local/cpanel/bin/checkallsslcerts
+
+
+=========================== plesk to cpanel migration - accounts dont show up =============================
+
+check /root/.my.cnf in plesk if it works in mysql -u admin -p
+if not run - cat /etc/psa/.psa.shadow and see if the password works
+if it does, run cp /root/.my.cnf /root/.my.cnf-$(date -I)
+then edit /root/.my.cnf and update the password
+
+
+
+
+==== jindo vendo ---
+sangreculture21
+
+
+
+
+
+check after 
+
+biz205 - screen -r 676.medicals
+
+
+
+===== DISK SPACE PRTG ====
+ find /home/*/public_html/ -maxdepth 5 -type f -name "error_log" -exec du -sh {} \;
+ find /home/*/public_html/  -maxdepth 4 -type f -name "debug.log" -exec du -sh {} \;
+ 
+ 
+# delete temp wordpress backup files
+rm -f /home/*/public_html/wp-content/uploads/back*/*.zip.??????
+
+
+
+backup retention - https://confluence.ds.network/display/BS/Backup+Overview
+
+
+
+172.22.1.144 - v1144
+hermes is at v1144 - 5250498
+
+v7 - 172.22.0.7
+v1105 - 172.22.1.105
+verzdesign v1206p.sgsvr.com - 172.22.1.206
+superghs - v231p.sgsvr.com 172.22.0.231
+v9.sgsvr.com - 172.22.0.9
+v1027p.sgsvr.com - 172.22.1.27
+v1153p.sgsvr.com - 
+
+
+v1138.sgsvr.com - 172.22.1.138
+
+v1023.sgsvr.com - 172.22.1.23
+ - dnsmanager.webvisions.com
+  - vzctl enter 99189181
+ - master.singteldns.com
+  - vzctl enter 4633308
+
+root cd - 7xQzvmsPAEaiaLEmA70i
+
+
+
+sg41
+sg47
+sg44
+
+
+
+culprit
+
+# Let’s look at a command which is used to searches for all external logins
+exigrep @ /var/log/exim_mainlog | grep _login | sed -n 's/.*_login:\(.*\)S=.*/\1/p' | sort | uniq -c | sort -nr -k1
+
+# check which user/account has been hacked:
+
+exigrep @ /var/log/exim_mainlog | grep U= | sed -n 's/.*U=\(.*\)S=.*/\1/p' | sort | uniq -c | sort -nr -k1
+
+# Let’s track down the script
+
+grep "cwd=" /var/log/exim_mainlog | awk '{for(i=1;i<=10;i++){print $i}}' | sort |uniq -c| grep cwd | sort -n | grep /home/
+
+
+
+# To correct redirection in vodien redirect
+step 1
+ssh 172.22.1.23
+
+step2
+vzctl enter 99189181
+whmlogin
+
+step3
+phpmyadmin
+ - vdnredir_db
+ - redirect
+ find the domain 
+
+
+
+ Install SSL Orion -sharedIP
+ https://crazydomains.zendesk.com/agent/tickets/20394649
+
+
+
+ # force kill a container
+
+ vzctl stop ID --fast
