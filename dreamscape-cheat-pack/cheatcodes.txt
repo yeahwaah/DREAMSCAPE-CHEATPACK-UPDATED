@@ -2362,3 +2362,9 @@ phpmyadmin
  # force kill a container
 
  vzctl stop ID --fast
+
+
+
+PDNS QUERY TO INSERT RECORDS THAT DID NOT SYNC
+
+INSERT INTO records VALUES (839477524, 173287576, 'jellyfin.livelovelife.uk', 'A', '109.145.210.109', 14400, 0, 0, NULL, 1) ON DUPLICATE KEY UPDATE domain_id = VALUES(domain_id), name = VALUES(name), type = VALUES(type), content = VALUES(content), ttl = VALUES(ttl), prio = VALUES(prio), disabled = VALUES(disabled), ordername = VALUES(ordername), auth = VALUES(auth);
